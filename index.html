@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Phase 10B: static twins of src/data/site.ts (first paint + crawlers).
+         Runtime sync in src/lib/seo.ts keeps them aligned with profile data.
+         No canonical / og:url yet: production domain not supplied (see siteUrl).
+         No og:image / twitter:image / favicon yet: no production assets on file. -->
+    <title>Muhammad Syafrudin Hilmi — Admin &amp; Personal Assistant</title>
+    <meta
+      name="description"
+      content="Muhammad Syafrudin Hilmi — Admin & Personal Assistant based in Ciamis, Indonesia. Economics graduate focused on administration, operations, and finance."
+    />
+    <meta name="theme-color" content="#121316" />
+
+    <!-- Open Graph (website: single-page portfolio; no image until assets exist) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Muhammad Syafrudin Hilmi — Admin & Personal Assistant" />
+    <meta
+      property="og:description"
+      content="Muhammad Syafrudin Hilmi — Admin & Personal Assistant based in Ciamis, Indonesia. Economics graduate focused on administration, operations, and finance."
+    />
+
+    <!-- Twitter/X summary card (no image until assets exist) -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Muhammad Syafrudin Hilmi — Admin & Personal Assistant" />
+    <meta
+      name="twitter:description"
+      content="Muhammad Syafrudin Hilmi — Admin & Personal Assistant based in Ciamis, Indonesia. Economics graduate focused on administration, operations, and finance."
+    />
+
+    <!-- Structured data: Person schema from CV-supported facts only.
+         No employer/award/GitHub/metrics claims; no email/phone exposure. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Syafrudin Hilmi",
+        "jobTitle": "Admin & Personal Assistant",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ciamis",
+          "addressRegion": "Jawa Barat",
+          "addressCountry": "ID"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universitas Islam Darussalam Ciamis"
+        },
+        "knowsAbout": [
+          "Administration Management",
+          "Document Management",
+          "Microsoft Excel",
+          "Social Media Management",
+          "Website Management"
+        ],
+        "sameAs": ["https://linkedin.com/in/muhammadsyafrudinhilmi"]
+      }
+    </script>
+
+    <!-- Geist + JetBrains Mono (matching Stitch load strategy) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Geist weights trimmed to used set (400/500/600/700); JetBrains Mono 400/500/600.
+         Geist 300 requested by no rule or utility — see Phase 10C font audit. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

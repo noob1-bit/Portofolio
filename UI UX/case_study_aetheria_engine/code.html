@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#121316", "tertiary": "#7bd0ff", "secondary-fixed-dim": "#c1c7cf", "surface-variant": "#343538", "on-background": "#e3e2e6", "secondary": "#c1c7cf", "on-primary": "#002b75", "on-error-container": "#ffdad6", "background": "#121316", "on-secondary-fixed-variant": "#41474e", "on-secondary-container": "#afb6bd", "on-secondary": "#2b3137", "surface": "#121316", "surface-container-lowest": "#0d0e11", "surface-tint": "#b3c5ff", "primary-fixed": "#dae1ff", "primary-fixed-dim": "#b3c5ff", "secondary-fixed": "#dde3eb", "on-surface": "#e3e2e6", "on-tertiary": "#00354a", "on-tertiary-fixed-variant": "#004c69", "on-error": "#690005", "on-primary-fixed-variant": "#003fa4", "on-secondary-fixed": "#161c22", "outline": "#8c90a1", "primary-container": "#0066ff", "on-surface-variant": "#c2c6d8", "tertiary-fixed-dim": "#7bd0ff", "on-primary-fixed": "#001849", "surface-container-high": "#292a2d", "surface-container": "#1f1f23", "primary": "#b3c5ff", "error-container": "#93000a", "tertiary-container": "#007aa5", "surface-container-highest": "#343538", "on-tertiary-fixed": "#001e2c", "inverse-surface": "#e3e2e6", "outline-variant": "#424656", "secondary-container": "#41474e", "on-primary-container": "#f8f7ff", "surface-bright": "#38393c", "on-tertiary-container": "#f1f8ff", "error": "#ffb4ab", "inverse-primary": "#0054d6", "surface-container-low": "#1b1b1f", "tertiary-fixed": "#c4e7ff", "inverse-on-surface": "#303034" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "24px", "gutter-mobile": "16px", "max-width-reading": "680px", "space-xs": "4px", "baseline-step": "4px", "space-md": "16px", "space-4xl": "96px", "space-xl": "32px", "space-sm": "8px", "gutter-desktop": "32px", "max-width-content": "1240px", "space-5xl": "128px", "space-3xl": "64px", "space-2xl": "48px" }, "fontFamily": { "mono-label": ["JetBrains Mono"], "headline-lg-mobile": ["Geist"], "headline-sm": ["Geist"], "headline-lg": ["Geist"], "body-lg": ["Geist"], "mono-metric": ["JetBrains Mono"], "body-sm": ["Geist"], "display-xl-mobile": ["Geist"], "headline-md": ["Geist"], "display-xl": ["Geist"], "mono-code": ["JetBrains Mono"], "body-md": ["Geist"] }, "fontSize": { "mono-label": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "mono-metric": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-xl-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "display-xl": ["64px", { "lineHeight": "70px", "letterSpacing": "-0.04em", "fontWeight": "600" }], "mono-code": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-16 max-w-max-width-content mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-max"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Architectural Personal Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeJezfQewHndOh9DRIF_DPTlPM_K_A3VJcGRG7a-7P48_uf9OL-NxT2Dh2m_DGfACBtz-iW7MQPSuDMXLMmJ5NyXTQt9GzhdtC2yKlYi3xovBFPXCh9JlekmRdtt4988Uol7gdxwSCsv0CeLGNBnxhOdsYmEghqgnqMMp92k2NFXvQi6r-RJuOSsZ45Lmvfstt911ph2fjezaUKwC1BHKz6a1dyuz_Ggpg97Eis9f74Q4kLCjy-sL6"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Kaelen Vance</span><span class="font-mono-label text-mono-label text-on-surface-variant uppercase">Principal Architect</span></div></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span class="font-mono-label text-mono-label text-secondary">Available for Q3 Advisory &amp; Architecture</span></div></div><nav class="hidden lg:flex items-center p-space-xs rounded-xl bg-surface-container-low border border-outline-variant/30 gap-space-xs" data-active-classes="bg-surface-container text-on-surface border border-outline-variant/60 font-medium"><a class="px-space-md py-1.5 rounded text-on-surface-variant font-mono-label text-mono-label tracking-wide uppercase hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="home" href="#">Home</a><a class="px-space-md py-1.5 rounded text-on-surface-variant font-mono-label text-mono-label tracking-wide uppercase hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="work" href="#">Work</a><a aria-current="page" class="px-space-md py-1.5 rounded tracking-wide uppercase transition-all bg-surface-container text-on-surface border border-outline-variant/60 font-medium" data-path="case-study" href="#">Case Study</a><a class="px-space-md py-1.5 rounded text-on-surface-variant font-mono-label text-mono-label tracking-wide uppercase hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="about" href="#">About</a><a class="px-space-md py-1.5 rounded text-on-surface-variant font-mono-label text-mono-label tracking-wide uppercase hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="skills" href="#">Skills</a><a class="px-space-md py-1.5 rounded text-on-surface-variant font-mono-label text-mono-label tracking-wide uppercase hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="experience" href="#">Experience</a><a class="px-space-md py-1.5 rounded text-on-surface-variant font-mono-label text-mono-label tracking-wide uppercase hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-space-xs pr-space-sm border-r border-outline-variant/40"><a aria-label="GitHub Profile" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="https://github.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px] leading-none">code</span></a><a aria-label="LinkedIn Profile" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px] leading-none">share</span></a><a aria-label="Direct Email" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="mailto:kaelen@vance.engineering"><span class="material-symbols-outlined text-[18px] leading-none">alternate_email</span></a></div><a class="hidden md:inline-flex items-center px-space-md py-1.5 rounded border border-outline-variant/50 font-mono-label text-mono-label text-on-surface hover:border-primary-container hover:text-on-surface transition-all" data-path="experience" href="#">CV.PDF</a><a class="inline-flex items-center px-space-md py-1.5 rounded bg-primary-container text-on-primary-container font-mono-label text-mono-label font-medium hover:bg-primary hover:text-on-primary transition-all" data-path="contact" href="#">LET'S TALK</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDxwSqZBXFl52H51r1_M-r_e2b0o6oDg8-XpETqRh1XmWl9nhUr_gKvRJd_DqoS_K41I3QAHTSMsAs1VvOtZvENe0b4VWNi5tYOH85G7bB2kmE7vECUjdedarksuGanir1NYCS3VrtBj7sAr4_5q96CLjycJjpSEqYSSIX7tTiyU5XGSHVBKWLe_y3d2KUpplCdwubPQ1reXqV_Z1tFH5LsAAHvfTIe6s2ksXJzfbMjR9kycXnKa9Q"/></div></div></header><main class="w-full pt-16 bg-background relative min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- Editorial Dossier Header -->
+<section class="relative w-full bg-surface-container-lowest px-gutter-mobile lg:px-gutter-desktop py-space-3xl overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 via-transparent to-tertiary-container/5 pointer-events-none"></div>
+<div class="max-w-max-width-content mx-auto relative z-10 flex flex-col gap-space-xl">
+<!-- Top Classification Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-secondary">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-semibold">REF: ARCH-0824</span>
+<span class="text-outline">/</span>
+<span>DISTRIBUTED_SYSTEMS</span>
+<span class="text-outline">/</span>
+<span class="text-tertiary uppercase">L3_ENGINE_PROTOCOL</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container text-on-surface font-mono-label text-mono-label">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            SYS_HEALTH: OPTIMAL
+          </span>
+<span class="font-mono-label text-mono-label text-outline">CLASS: PUBLIC SPEC</span>
+</div>
+</div>
+<!-- Main Title Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs">
+<span class="px-2 py-0.5 bg-primary-container text-on-primary-container font-mono-label text-mono-label uppercase tracking-wider rounded">Production Spec</span>
+<span class="font-mono-label text-mono-label text-outline">REV 4.2.1 • NOV 2024</span>
+</div>
+<h1 class="font-display-xl text-display-xl tracking-tight text-on-surface">
+            Aetheria Engine
+          </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-max-width-reading">
+            Architecting a zero-copy, sub-10ms state synchronization protocol for collaborative spatial computing and multi-tenant canvas applications.
+          </p>
+</div>
+<!-- Telemetry Glance Module -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-xl">
+<span class="font-mono-label text-mono-label text-outline uppercase tracking-wider">PRIMARY TARGET BENCHMARK</span>
+<div class="flex items-baseline justify-between">
+<span class="font-mono-metric text-mono-metric text-primary">6.2 ms</span>
+<span class="font-mono-label text-mono-label text-tertiary">P99 LATENCY REACHED</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden mt-1">
+<div class="bg-primary h-full w-[96%]"></div>
+</div>
+<span class="font-mono-code text-mono-code text-secondary text-right mt-1">Δ -96.6% vs WebSocket/JSON baseline</span>
+</div>
+</div>
+<!-- Structural Metadata Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md pt-space-md bg-surface-container rounded-xl p-space-md text-on-surface">
+<div class="flex flex-col gap-0.5">
+<span class="font-mono-label text-mono-label text-outline uppercase">Principal Role</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Lead Systems Architect</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono-label text-mono-label text-outline uppercase">Execution Cadence</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">14 Months (Inception → Prod)</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono-label text-mono-label text-outline uppercase">Runtime Topology</span>
+<span class="font-body-md text-body-md font-medium text-emerald-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Multi-Region Edge Mesh
+          </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono-label text-mono-label text-outline uppercase">Stack Infrastructure</span>
+<span class="font-mono-code text-mono-code text-on-surface-variant truncate">Rust, Tokio, WebTransport, Yrs, QUIC</span>
+</div>
+</div>
+<!-- Action Controller Bar -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-mono-label text-mono-label font-medium transition-all flex items-center gap-space-xs shadow-md" id="launchDemoBtn">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+          LIVE INTERACTIVE DEMO [LAUNCH SANDBOX]
+        </button>
+<a class="px-space-md py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-mono-label text-mono-label transition-colors flex items-center gap-space-xs" href="https://github.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+          SOURCE CODE (kvance/aetheria-core)
+        </a>
+<a class="px-space-md py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-secondary hover:text-on-surface font-mono-label text-mono-label transition-colors flex items-center gap-space-xs" href="#architecture">
+<span class="material-symbols-outlined text-[18px]">article</span>
+          SPEC RFC-8840 [WHITE PAPER]
+        </a>
+</div>
+</div>
+</section>
+<!-- Interactive Sandbox Modal Drawer (Toggled via JS) -->
+<div class="hidden fixed inset-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md items-center justify-center p-space-md" id="demoModal">
+<div class="bg-surface-container-low max-w-4xl w-full rounded-xl p-space-lg shadow-2xl flex flex-col gap-space-md relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="font-mono-label text-mono-label text-on-surface uppercase">Aetheria WebTransport Datagram Simulator (Simulated Rust/WASM node)</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="closeDemoBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Interactive Engine Canvas Simulator -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="md:col-span-2 bg-surface-container-lowest rounded p-space-md flex flex-col gap-space-sm h-64 justify-between">
+<div class="flex justify-between font-mono-label text-mono-label text-outline">
+<span>SPATIAL CANVAS VECTOR BUS</span>
+<span class="text-tertiary" id="packetCounter">PACKETS: 0</span>
+</div>
+<div class="grid grid-cols-6 gap-2 my-auto" id="nodeGrid">
+<div class="h-8 rounded bg-surface-container flex items-center justify-center font-mono-label text-[10px] text-secondary">N_01</div>
+<div class="h-8 rounded bg-surface-container flex items-center justify-center font-mono-label text-[10px] text-secondary">N_02</div>
+<div class="h-8 rounded bg-surface-container flex items-center justify-center font-mono-label text-[10px] text-secondary">N_03</div>
+<div class="h-8 rounded bg-surface-container flex items-center justify-center font-mono-label text-[10px] text-secondary">N_04</div>
+<div class="h-8 rounded bg-surface-container flex items-center justify-center font-mono-label text-[10px] text-secondary">N_05</div>
+<div class="h-8 rounded bg-surface-container flex items-center justify-center font-mono-label text-[10px] text-secondary">N_06</div>
+</div>
+<div class="flex gap-2">
+<button class="px-space-sm py-1 bg-primary-container text-on-primary-container font-mono-label text-mono-label rounded hover:bg-primary hover:text-on-primary" id="burstBtn">
+              INJECT 100 CONCURRENT CONFLICTS
+            </button>
+<button class="px-space-sm py-1 bg-surface-container text-secondary font-mono-label text-mono-label rounded hover:bg-surface-container-high" id="clearBtn">
+              RESET RAFT WAL
+            </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded p-space-md font-mono-code text-mono-code flex flex-col gap-1 text-[11px] text-secondary overflow-y-auto h-64" id="logConsole">
+<div class="text-emerald-400">&gt; [QUIC] 0-RTT Handshake validated.</div>
+<div class="text-on-surface">&gt; [CRDT] Yrs doc snapshot anchored @ epoch 0x8F.</div>
+<div class="text-outline">&gt; Listening on /stream/datagrams...</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Paper Body: Split Layout -->
+<div class="max-w-max-width-content mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+<!-- Left Reading Spine: Editorial Narrative -->
+<div class="lg:col-span-8 flex flex-col gap-space-3xl">
+<!-- 1. Executive Summary & Overview -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>01</span>
+<span class="text-outline">//</span>
+<span>EXECUTIVE_OVERVIEW</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Breakdown of WebSocket JSON Serialization Under Scale</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant flex flex-col gap-space-sm max-w-max-width-reading">
+<p>
+              In distributed spatial computing and real-time infinite collaborative canvases, the persistent industry standard—synchronizing mutation deltas as structured JSON payloads over TCP-bound WebSockets—collapses under high concurrency. During intense brainstorming sessions with 50+ concurrent contributors editing dense vector graphs, the traditional client-server topology suffers fatal degradation.
+            </p>
+<p>
+              Under high contention, TCP’s strict head-of-line blocking creates cascading latency spikes. If a single coordinate packet drops amidst network jitter, the entire downstream state pipe pauses until retransmission completes. Compounding this, the runtime cost of serializing complex AST modifications into JSON strings choked browser UI threads, forcing garbage collection pauses that triggered frame degradation below 24fps.
+            </p>
+</div>
+<!-- Narrative Architectural Callout Box -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col gap-space-sm my-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono-label text-mono-label text-primary uppercase">CRITICAL SYSTEM FINDING</span>
+<span class="font-mono-label text-mono-label text-outline">AUDIT METRIC</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              "Over 73% of end-to-end sync delay in WebSocket implementations was not raw transmission time across physical fibers, but memory-marshalling bottlenecks, TCP packet queue congestion, and redundant tombstone metadata re-broadcasts."
+            </p>
+</div>
+</article>
+<!-- 2. Problem Statement & Operational Boundary -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>02</span>
+<span class="text-outline">//</span>
+<span>PROBLEM_FORMULATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Triple Bottleneck: Jitter, Head-of-Line Blocking, and Lock Contention</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant flex flex-col gap-space-sm max-w-max-width-reading">
+<p>
+              When distributed users make concurrent spatial movements in 3D or layered 2D viewports, state synchronization requires 60Hz positional cadence coupled with strict causal consistency for semantic tree mutations (e.g. reparenting components, changing boolean operations).
+            </p>
+<p>
+              The existing legacy stack suffered from three structural flaws:
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md my-space-xs">
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">troubleshoot</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">TCP Stalling</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Packet loss on transient cellular or transoceanic links halted the delivery of all subsequent canvas operations.</p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">memory</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">GC Storms</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Allocating 8,000+ tiny JSON differential diffs per second triggered severe V8 engine memory churn.</p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">call_split</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Split Brains</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Centralized Redis locking queues collapsed under edge-to-edge partitioning, desyncing vector nodes.</p>
+</div>
+</div>
+</article>
+<!-- 3. Quantitative Targets -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>03</span>
+<span class="text-outline">//</span>
+<span>SPECIFICATION_TARGETS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Non-Negotiable Architecture SLA Targets</h2>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="grid grid-cols-12 bg-surface-container-high p-space-sm font-mono-label text-mono-label text-outline uppercase">
+<div class="col-span-5">Metric / Dimension</div>
+<div class="col-span-3">Legacy WebSocket</div>
+<div class="col-span-4 text-primary">Aetheria Target SLA</div>
+</div>
+<div class="divide-y divide-surface-container-highest">
+<div class="grid grid-cols-12 p-space-md font-body-sm text-body-sm items-center">
+<div class="col-span-5 font-mono-code text-on-surface">P99 Transit Latency (NYC ↔ LON)</div>
+<div class="col-span-3 text-error">184 ms</div>
+<div class="col-span-4 font-mono-code text-emerald-400 font-semibold">&lt; 15.0 ms (Datagram)</div>
+</div>
+<div class="grid grid-cols-12 p-space-md font-body-sm text-body-sm items-center bg-surface-container/40">
+<div class="col-span-5 font-mono-code text-on-surface">Client Heap Footprint</div>
+<div class="col-span-3 text-secondary">142 MB</div>
+<div class="col-span-4 font-mono-code text-emerald-400 font-semibold">&lt; 24.0 MB Instance</div>
+</div>
+<div class="grid grid-cols-12 p-space-md font-body-sm text-body-sm items-center">
+<div class="col-span-5 font-mono-code text-on-surface">Concurrent Spatial Actors</div>
+<div class="col-span-3 text-secondary">16 Max per room</div>
+<div class="col-span-4 font-mono-code text-emerald-400 font-semibold">250+ without degradation</div>
+</div>
+<div class="grid grid-cols-12 p-space-md font-body-sm text-body-sm items-center bg-surface-container/40">
+<div class="col-span-5 font-mono-code text-on-surface">State Desync Tolerance</div>
+<div class="col-span-3 text-error">0.42% sessions</div>
+<div class="col-span-4 font-mono-code text-emerald-400 font-semibold">Strict Zero (Provable CRDT)</div>
+</div>
+</div>
+</div>
+</article>
+<!-- 4. Leadership & Execution Structure -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>04</span>
+<span class="text-outline">//</span>
+<span>LEADERSHIP_AND_METHODOLOGY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Role: Sole Architect &amp; Engineering Spearhead</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant flex flex-col gap-space-sm max-w-max-width-reading">
+<p>
+              I authored the initial RFC-8840 specification, designed the binary wire protocol grammar, and drafted the core synchronization algorithms in Rust. Beyond pure architecture, my role encompassed:
+            </p>
+<ul class="flex flex-col gap-space-xs text-body-md text-secondary pl-space-md list-disc">
+<li><strong class="text-on-surface">Technical Oversight:</strong> Directed 4 platform engineers implementing client WebAssembly wrappers (TypeScript/Rust bindgen) and edge QUIC listeners.</li>
+<li><strong class="text-on-surface">Formal Verification:</strong> Modeled state convergence edge-cases in TLA+ to mathematically verify eventual consistency under arbitrary network partitions.</li>
+<li><strong class="text-on-surface">Zero-Disruption Migration:</strong> Designed a shadow telemetry proxy pipeline allowing live production traffic to mirror onto Aetheria without impacting end users for 6 weeks prior to cutover.</li>
+</ul>
+</div>
+</article>
+<!-- 5. Technical Approach & Innovation -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>05</span>
+<span class="text-outline">//</span>
+<span>SYSTEM_APPROACH</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Dual-Channel Wire Protocol: Delta-CRDTs over WebTransport</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant flex flex-col gap-space-sm max-w-max-width-reading">
+<p>
+              Aetheria bifurcates data into two distinct operational lanes over a single unified QUIC session:
+            </p>
+<p>
+<strong>1. Unreliable Datagram Channel (Ephemeral Spatial Updates):</strong> High-frequency cursor paths, hover states, and camera transforms are broadcast via raw UDP datagrams. If an update packet is lost, it is skipped rather than retransmitted, because the next tick renders it obsolete anyway.
+            </p>
+<p>
+<strong>2. Reliable Bidirectional Streams (Deterministic Structural Graph):</strong> Node additions, parent reassignments, text modifications, and layer hierarchy changes are channeled via reliable QUIC streams into a localized Yrs (Rust port of Yjs) CRDT state machine.
+            </p>
+</div>
+<!-- Code / Logic Schema -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md font-mono-code text-mono-code text-[12px] flex flex-col gap-2 overflow-x-auto text-on-surface">
+<div class="text-outline">// Wire Header Representation: 8-byte zero-copy alignment</div>
+<div class="text-tertiary">#[repr(C, packed)]</div>
+<div><span class="text-primary font-semibold">pub struct</span> <span class="text-on-surface font-bold">AetheriaPacketHeader</span> {</div>
+<div class="pl-space-md text-secondary">epoch_id: <span class="text-primary-fixed-dim">u32</span>,          <span class="text-outline">// Monotonic cluster epoch</span></div>
+<div class="pl-space-md text-secondary">client_seq: <span class="text-primary-fixed-dim">u16</span>,        <span class="text-outline">// Sliding window frame ID</span></div>
+<div class="pl-space-md text-secondary">channel_kind: <span class="text-primary-fixed-dim">u8</span>,       <span class="text-outline">// 0x01: Datagram, 0x02: Stream Delta</span></div>
+<div class="pl-space-md text-secondary">payload_len: <span class="text-primary-fixed-dim">u8</span>,        <span class="text-outline">// Direct memory slice pointer</span></div>
+<div>}</div>
+</div>
+</article>
+<!-- 6. Architecture Blueprint -->
+<article class="flex flex-col gap-space-md" id="architecture">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>06</span>
+<span class="text-outline">//</span>
+<span>TOPOLOGY_BLUEPRINT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Multi-Tier Resilient Architecture</h2>
+<p class="font-body-md text-body-md text-secondary max-w-max-width-reading">
+            Client nodes interface directly with our worldwide edge Anycast network, proxying state packets directly to localized Raft consensus partitions.
+          </p>
+<!-- SVG Visual Topology Diagram -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg flex flex-col items-center justify-center">
+<svg class="w-full h-auto text-on-surface" fill="none" viewbox="0 0 760 280" xmlns="http://www.w3.org/2000/svg">
+<!-- Tier 1: Client Node -->
+<rect class="fill-surface-container" height="90" rx="8" width="180" x="20" y="30"></rect>
+<text class="fill-primary font-mono-label font-bold text-[12px]" x="35" y="58">TIER 1: WASM CLIENT</text>
+<text class="fill-on-surface-variant font-mono-code text-[10px]" x="35" y="78">Browser UI / Canvas Loop</text>
+<text class="fill-tertiary font-mono-code text-[10px]" x="35" y="96">Yrs Memory Core (Rust)</text>
+<!-- Connection Arrow 1 -->
+<path d="M200 75 L280 75" stroke="#8c90a1" stroke-dasharray="4 4" stroke-width="2"></path>
+<text class="fill-outline font-mono-label text-[9px]" x="210" y="68">WebTransport</text>
+<!-- Tier 2: Edge Router -->
+<rect class="fill-surface-container" height="90" rx="8" width="200" x="280" y="30"></rect>
+<text class="fill-primary font-mono-label font-bold text-[12px]" x="295" y="58">TIER 2: EDGE ROUTER</text>
+<text class="fill-on-surface-variant font-mono-code text-[10px]" x="295" y="78">Tokio QUIC Listener</text>
+<text class="fill-emerald-400 font-mono-code text-[10px]" x="295" y="96">Delta De-duplication</text>
+<!-- Connection Arrow 2 -->
+<path d="M480 75 L560 75" stroke="#8c90a1" stroke-width="2"></path>
+<text class="fill-outline font-mono-label text-[9px]" x="495" y="68">gRPC IPC</text>
+<!-- Tier 3: Coordination Pool -->
+<rect class="fill-surface-container" height="90" rx="8" width="180" x="560" y="30"></rect>
+<text class="fill-primary font-mono-label font-bold text-[12px]" x="575" y="58">TIER 3: RAFT POOL</text>
+<text class="fill-on-surface-variant font-mono-code text-[10px]" x="575" y="78">Log Replicators</text>
+<text class="fill-secondary font-mono-code text-[10px]" x="575" y="96">Cluster Heartbeat</text>
+<!-- Vertical arrow to Durable Store -->
+<path d="M650 120 L650 180" stroke="#8c90a1" stroke-width="2"></path>
+<text class="fill-outline font-mono-label text-[9px]" x="660" y="155">Fsync Commit</text>
+<!-- Tier 4: Durable WAL -->
+<rect class="fill-surface-container-high" height="70" rx="8" width="460" x="280" y="180"></rect>
+<text class="fill-on-surface font-mono-label font-bold text-[12px]" x="300" y="210">TIER 4: DURABLE WRITE-AHEAD-LOG &amp; BLOB SNAPSHOT ARCHIVE</text>
+<text class="fill-secondary font-mono-code text-[10px]" x="300" y="232">Zero-copy S3 Compaction • RocksDB Key-Value Slices • Immutable Delta Logs</text>
+</svg>
+<span class="font-mono-label text-mono-label text-outline mt-space-sm text-center">FIG 1.4: REAL-TIME PACKET FANOUT TOPOLOGY OVER DUAL-BAND QUIC STREAMS</span>
+</div>
+</article>
+<!-- 7. Critical Challenges & Breakthroughs -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>07</span>
+<span class="text-outline">//</span>
+<span>ENGINEERING_CHALLENGES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Tombstone Accumulation Crisis &amp; Epoch Compaction</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant flex flex-col gap-space-sm max-w-max-width-reading">
+<p>
+              In traditional operation-based CRDTs, deleting or modifying an item leaves behind a “tombstone” identifier to guarantee idempotency across out-of-order deliveries. In rapid collaborative sessions with thousands of path redraws, client memory swelled past 300MB within 45 minutes due to graveyard tombstone retention.
+            </p>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs my-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">The Solution: Non-Blocking Epoch Compaction</span>
+<p class="font-body-md text-body-md text-secondary">
+                We designed an epoch-based sliding window algorithm. Every 120 seconds, when the Raft coordination pool confirms all active clients have acknowledged sequence vector <code class="font-mono-code text-primary">λ &gt; k</code>, a background Rust worker merges all historical state trees into a consolidated baseline binary snapshot. Tombstones preceding the epoch are discarded permanently. Serialization pipelines never lock or stall.
+              </p>
+</div>
+</div>
+</article>
+<!-- 8. Benchmarks & Results -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>08</span>
+<span class="text-outline">//</span>
+<span>PRODUCTION_METRICS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Empirical Benchmarks &amp; Hard Numbers</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-sm">
+<span class="font-mono-label text-mono-label text-outline uppercase">P99 Transmit Delay</span>
+<div class="flex flex-col">
+<span class="font-mono-metric text-mono-metric text-emerald-400">6.2 ms</span>
+<span class="font-mono-code text-mono-code text-secondary line-through">184.0 ms previous</span>
+</div>
+<span class="font-mono-label text-mono-label text-primary">96.6% REDUCTION</span>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-sm">
+<span class="font-mono-label text-mono-label text-outline uppercase">Network Bandwidth</span>
+<div class="flex flex-col">
+<span class="font-mono-metric text-mono-metric text-primary">-82.4%</span>
+<span class="font-mono-code text-mono-code text-secondary">Custom Bit-Packed Varint</span>
+</div>
+<span class="font-mono-label text-mono-label text-emerald-400">1.2 KB/s PER ACTIVE PEER</span>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-sm">
+<span class="font-mono-label text-mono-label text-outline uppercase">Desynchronization</span>
+<div class="flex flex-col">
+<span class="font-mono-metric text-mono-metric text-on-surface">0.0000%</span>
+<span class="font-mono-code text-mono-code text-secondary">4.2M Sessions Monitored</span>
+</div>
+<span class="font-mono-label text-mono-label text-emerald-400">PROVABLE ZERO CONFLICT</span>
+</div>
+</div>
+<!-- Production Log Teletype Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl font-mono-code text-mono-code text-[11px] text-secondary flex flex-col gap-1">
+<div class="text-outline">--- REPRODUCIBLE LOAD TEST BENCHMARK RUN (10,000 CONCURRENT CLIENT NODES) ---</div>
+<div>[BENCH_01] Spin up: 10,000 virtual WASM agents across us-east, eu-west, ap-southeast.</div>
+<div>[BENCH_02] Generating 45,000 random SVG spline mutations / sec.</div>
+<div>[BENCH_03] QUIC Connection drops injected: 8.5% random packet drops via netem.</div>
+<div class="text-emerald-400 font-semibold">[BENCH_04] Total state convergence achieved in 11.2ms P99 across all nodes. 0 hash mismatches.</div>
+</div>
+</article>
+<!-- 9. Retrospective & Trade-offs -->
+<article class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-mono-label text-mono-label text-tertiary">
+<span>09</span>
+<span class="text-outline">//</span>
+<span>POST_MORTEM_RETROSPECTIVE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Lessons Learned: The Strict Limits of Pure Eventual Consistency</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant flex flex-col gap-space-sm max-w-max-width-reading">
+<p>
+              While CRDTs promise utopian peer-to-peer eventual convergence, enterprise collaborative software requires authoritative guardrails. We learned early on that without an underlying causal authorization layer, malicious or stale clients could emit valid CRDT transforms that silently corrupted document security semantics.
+            </p>
+<p>
+              Furthermore, WebTransport browser support remains evolving; building an automatic, transparent fallback to HTTP/2 streams and WebSockets was not an afterthought—it represented roughly 30% of total client wrapper engineering effort.
+            </p>
+</div>
+</article>
+</div>
+<!-- Right Sidebar Column: Metadata, Tech Spec, and Visual Evidence -->
+<aside class="lg:col-span-4 flex flex-col gap-space-xl">
+<!-- Engineering Specification Blueprint Card -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col gap-space-md sticky top-24">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-mono-label text-mono-label text-on-surface uppercase font-bold">PROTOCOL SPEC CARD</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-mono-label text-mono-label text-outline uppercase">Network Transport</span>
+<span class="font-mono-code text-mono-code text-on-surface">QUIC / WebTransport / UDP fallback</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-mono-label text-mono-label text-outline uppercase">Serialization Format</span>
+<span class="font-mono-code text-mono-code text-on-surface">Custom Bit-Packed Varint Binary</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-mono-label text-mono-label text-outline uppercase">Consensus Algorithm</span>
+<span class="font-mono-code text-mono-code text-on-surface">State-based Yrs CRDT + Raft WAL</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-mono-label text-mono-label text-outline uppercase">Core Repository Modules</span>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-mono-code text-[11px] text-secondary">aetheria-proto</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-mono-code text-[11px] text-secondary">aetheria-edge</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-mono-code text-[11px] text-secondary">aetheria-wasm</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-mono-code text-[11px] text-secondary">aetheria-raft</span>
+</div>
+</div>
+<!-- Micro Sparkline Telemetry Widget -->
+<div class="bg-surface-container-lowest p-space-md rounded flex flex-col gap-space-xs mt-space-sm">
+<div class="flex justify-between items-center font-mono-label text-mono-label">
+<span class="text-outline">PACKET JITTER PROFILE</span>
+<span class="text-emerald-400">σ = 0.8ms</span>
+</div>
+<svg class="w-full h-12 text-primary" fill="none" viewbox="0 0 200 40">
+<path d="M0 25 L20 23 L40 26 L60 21 L80 22 L100 8 L120 24 L140 23 L160 22 L180 23 L200 24" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M0 25 L20 23 L40 26 L60 21 L80 22 L100 8 L120 24 L140 23 L160 22 L180 23 L200 24 L200 40 L0 40 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+<span class="font-mono-label text-[9px] text-secondary text-right">ZERO HEAD-OF-LINE BUFFER SPIKES</span>
+</div>
+<!-- Architectural Photo Proof Placeholder 1 -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<span class="font-mono-label text-mono-label text-outline uppercase">RUNTIME OBSERVABILITY TELEMETRY</span>
+<div class="overflow-hidden rounded h-40 w-full relative">
+<img class="object-cover w-full h-full" data-alt="High-density real-time dark mode telemetry observability dashboard displaying distributed QUIC packet traces, low latency flamegraphs, memory allocation curves, and edge nodes on a world map in technical shades of cobalt blue and graphite." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4jrq1hmDcXChWGGfIHmFJsRurwDbAcLeDm98zFpGDl2X5mWRFA55Ztgb_an7LGeutzsVP_fu3odv9E-h0wxhb_AwUWYGH9Y_UV2Bw36IiGxuAZb35iOvNup_3igAhtGJLUCNpfCp0vUMpft-fo5ombJ1iZmE01NFl80LByKytyyC20kNuawsBWwP5X696NbCZeCbTH4ieaEGGLAmLAw4LUZWsxonM7dvy_c3fP5_vRct-XZczRTSP"/>
+</div>
+<span class="font-mono-label text-[10px] text-outline">Grafana cluster metrics during real-time load burst</span>
+</div>
+<!-- Architectural Photo Proof Placeholder 2 -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<span class="font-mono-label text-mono-label text-outline uppercase">WASM CANVAS BENCHMARK PROFILER</span>
+<div class="overflow-hidden rounded h-40 w-full relative">
+<img class="object-cover w-full h-full" data-alt="Close-up technical visualization of a browser rendering profiler showing continuous 120 frames per second green execution timeline bars, zero garbage collection pauses, and low JavaScript thread usage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfbK65JAF7wm5u4hbLpky0oLFGiCCuScVCgnct0kFXnxwUfzrXponByxa9Jg3OV6FAfi9b7BISTY5_tgqXraOMZg8Yz997mfWKl9OlD_NKXyLa94bcYvoxh8imeSanXZa5E9tZtkLdKO47rPskb4Ed_gUlnaGVB7SaXeGRNaSRxG-UcgRxVAypjmct3rYTM7C6Faiw-hcGj-bWAblinXdaZyBL80AKNpmJzIJf3VZK1yGZtnLt_COO"/>
+</div>
+<span class="font-mono-label text-[10px] text-outline">V8 DevTools heap snapshot under 250 concurrent clients</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Bottom Navigation & Archive Transition Section -->
+<section class="w-full bg-surface-container py-space-2xl px-gutter-mobile lg:px-gutter-desktop mt-space-3xl">
+<div class="max-w-max-width-content mx-auto flex flex-col md:flex-row items-center justify-between gap-space-xl">
+<a class="flex items-center gap-space-sm group text-secondary hover:text-on-surface transition-colors" data-path="work" href="#">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+<div class="flex flex-col">
+<span class="font-mono-label text-mono-label text-outline uppercase">PORTFOLIO INDEX</span>
+<span class="font-headline-sm text-headline-sm">All Systems Archive</span>
+</div>
+</a>
+<div class="hidden md:block h-10 w-px bg-outline-variant/30"></div>
+<a class="flex items-center gap-space-sm group text-right text-on-surface hover:text-primary transition-colors" data-path="case-study" href="#">
+<div class="flex flex-col">
+<span class="font-mono-label text-mono-label text-outline uppercase">NEXT CASE STUDY</span>
+<span class="font-headline-sm text-headline-sm">Nexus Clearing Mesh: Real-Time FX Ledger →</span>
+</div>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1 text-primary">arrow_forward</span>
+</a>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const launchBtn = document.getElementById('launchDemoBtn');
+    const closeBtn = document.getElementById('closeDemoBtn');
+    const modal = document.getElementById('demoModal');
+    const burstBtn = document.getElementById('burstBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const logConsole = document.getElementById('logConsole');
+    const packetCounter = document.getElementById('packetCounter');
+    const nodeGrid = document.getElementById('nodeGrid');
+
+    let packets = 0;
+
+    if (launchBtn && modal && closeBtn) {
+      launchBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      });
+    }
+
+    if (burstBtn && logConsole && packetCounter && nodeGrid) {
+      burstBtn.addEventListener('click', () => {
+        packets += 100;
+        packetCounter.textContent = 'PACKETS: ' + packets;
+
+        // Flash node states
+        const nodes = nodeGrid.children;
+        for (let i = 0; i < nodes.length; i++) {
+          nodes[i].classList.remove('bg-surface-container');
+          nodes[i].classList.add('bg-primary-container', 'text-on-primary-container');
+          setTimeout(() => {
+            nodes[i].classList.remove('bg-primary-container', 'text-on-primary-container');
+            nodes[i].classList.add('bg-surface-container');
+          }, 300 + (i * 60));
+        }
+
+        const log = document.createElement('div');
+        log.className = 'text-tertiary';
+        log.textContent = '> Ingested 100 deltas @ ' + new Date().toISOString().substring(11, 23) + ' - Converged in 2.8ms';
+        logConsole.appendChild(log);
+        logConsole.scrollTop = logConsole.scrollHeight;
+      });
+
+      clearBtn.addEventListener('click', () => {
+        packets = 0;
+        packetCounter.textContent = 'PACKETS: 0';
+        logConsole.innerHTML = '<div class="text-emerald-400">> [QUIC] 0-RTT Handshake validated.</div><div class="text-on-surface">> [CRDT] State snapshot cleared & re-anchored.</div>';
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-2xl text-on-surface-variant"><div class="max-w-max-width-content mx-auto px-gutter-mobile lg:px-gutter-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-2xl border-b border-outline-variant/20"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="font-mono-label text-mono-label text-on-surface tracking-wider uppercase">SYSTEM CORE ACTIVE</span></div><p class="font-mono-code text-mono-code text-secondary">Kernel 6.8.0-arch / Distributed Architecture / Zero-Cliché Protocol</p><span class="font-mono-label text-mono-label text-outline">LATENCY: &lt;18MS P99</span></div><div class="flex flex-col gap-space-sm"><span class="font-mono-label text-mono-label text-on-surface uppercase tracking-wider">GEOLOCATION &amp; TIME</span><p class="font-mono-code text-mono-code text-secondary">40.7128° N, 74.0060° W</p><p class="font-mono-code text-mono-code text-secondary">TIMEZONE: UTC-04:00 (EST)</p><span class="font-mono-label text-mono-label text-outline">STATUS: SYNCHRONIZED</span></div><div class="flex flex-col gap-space-sm"><span class="font-mono-label text-mono-label text-on-surface uppercase tracking-wider">NAV ARCHITECTURE</span><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-mono-label text-mono-label"><a class="hover:text-primary transition-colors" data-path="home" href="#">/home</a><a class="hover:text-primary transition-colors" data-path="work" href="#">/work</a><a class="hover:text-primary transition-colors" data-path="case-study" href="#">/case-study</a><a class="hover:text-primary transition-colors" data-path="about" href="#">/about</a><a class="hover:text-primary transition-colors" data-path="skills" href="#">/skills</a><a class="hover:text-primary transition-colors" data-path="experience" href="#">/experience</a><a class="hover:text-primary transition-colors" data-path="contact" href="#">/contact</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-mono-label text-mono-label text-on-surface uppercase tracking-wider">ENCRYPTION &amp; COMMS</span><div class="flex flex-col font-mono-code text-mono-code gap-space-xs text-secondary"><a class="hover:text-on-surface transition-colors" href="mailto:kaelen@vance.engineering">kaelen@vance.engineering</a><span class="font-mono-label text-mono-label text-outline">PGP: 4B91 74CD 821E FF39</span><span class="font-mono-label text-mono-label text-outline">RESPONSE SLA: &lt; 24 HRS</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><span class="font-mono-label text-mono-label text-outline">© 2024 KAELEN VANCE. RIGOROUS SYSTEMS DESIGN &amp; TECHNICAL ARCHITECTURE.</span><div class="flex items-center gap-space-lg font-mono-label text-mono-label text-outline"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">verified</span> SPEC 12-COL 4PX BASELINE</span><span>ALL RIGHTS RESERVED</span></div></div></div></footer></body></html>

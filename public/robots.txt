@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap is emitted at build time as /sitemap.xml once a production
+# domain is configured in src/data/site.ts (siteUrl). Until then no
+# sitemap is published, so crawlers are never pointed at a placeholder
+# domain. After configuring siteUrl, rebuild and add:
+# Sitemap: https://[your-domain]/sitemap.xml

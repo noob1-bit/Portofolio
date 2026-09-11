@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Production output (rebuilt by Cloudflare Pages via `npm run build`)
+dist/
+
+# Environment secrets (none required — static site, no backend)
+.env
+.env.*
+*.local
+
+# Editor caches
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+npm-debug.log*
+*.tmp
+*.temp
